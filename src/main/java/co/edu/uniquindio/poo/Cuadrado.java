@@ -1,87 +1,31 @@
 package co.edu.uniquindio.poo;
 
-public class Cuadrado extends FiguraRegular implements IFiguraGeometrica {
-    private double ancho;
-    private double largo;
-    private double longitudLado;
+public class Cuadrado extends FiguraRegular implements IFiguraGeometrica,IFiguraRegular{
 
-    //constructor 
-    public Cuadrado(double lado, double ancho, double largo, double longitudLado) {
+    public Cuadrado(double lado) {
         super(lado);
-        this.ancho = ancho;
-        this.largo = largo;
-        this.longitudLado = longitudLado;
     }
-    //Métodos utilizados
+
     @Override
     public double calcularArea() {
-        double areaCuadrado= ancho * largo;
-        System.out.println("El área del cuadrado es de: "+ areaCuadrado);
-        return areaCuadrado;
+        return lado*lado;
     }
 
     @Override
     public double calcularPerimetro() {
-        double perimetroCuadrado = 2*(ancho+largo);
-        System.out.println("Elperímetro del cuadrado es de: " + perimetroCuadrado);
-        return perimetroCuadrado;
+        return lado*4;
     }
 
     @Override
-    public double calcularSumaAngulosInteriores() {
-        double angulosInterioresCuadrado= (lado-2)* 180;
-        System.out.println("La suma de los ángulos interiores del cuadradon es de: " + angulosInterioresCuadrado);
-        return angulosInterioresCuadrado;
+    public String calcularAngulo() {
+        return "cada angulo del cuadrado mide 90 grados asi dado un angulo completo de 360 grados";
     }
 
     @Override
-    public double calcularLongitudApotema() {
-        double longitudApotemaCuadrado=lado / (2 * Math.tan(Math.PI / longitudLado));
-        System.out.println("La longitud de Apotema del cuadrado es de: " + longitudApotemaCuadrado);
-        return longitudApotemaCuadrado;
+    public double calcularLongitud() {
+        return lado/2.0;
     }
-
-    @Override
-    public double calcularDiagonalCuadrados() {
-        double diagonalCuadrado= lado + Math.sqrt(2);
-        System.out.println("La diagonal del cuadrado es de: " + diagonalCuadrado);
-        return diagonalCuadrado;
+    public double calcularDiagonal(){
+        return lado * Math.sqrt(2);
     }
-
-    //DEMÁS MÉTODOS NO UTILIZADOS
-    @Override
-    public double calcularDiametroCirculos() {
-        return 0.0;
-    }
-
-    @Override
-    public double calcularAlturaTriangulos() {
-        return 0.0;
-    }
-    
-    //getter y setter
-        public double getAncho() {
-        return ancho;
-    }
-
-    public void setAncho(double ancho) {
-        this.ancho = ancho;
-    }
-
-     public double getLargo() {
-        return largo;
-    }
-
-    public void setLargo(double largo) {
-        this.largo = largo;
-    }
-
-       public double getLongitudLado() {
-        return longitudLado;
-    }
-
-    public void setLongitudLado(double longitudLado) {
-        this.longitudLado = longitudLado;
-    }   
-    
 }
