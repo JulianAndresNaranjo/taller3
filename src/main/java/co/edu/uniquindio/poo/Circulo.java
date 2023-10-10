@@ -1,11 +1,12 @@
 package co.edu.uniquindio.poo;
 
 public class Circulo extends FiguraRegular implements IFiguraGeometrica {
-
+    //constructor
     public Circulo(double lado) {
         super(lado);
     }
 
+    //metodos
     public double calcularArea() {
         return Math.PI * Math.pow(lado, 2);
     }
