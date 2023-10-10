@@ -1,27 +1,26 @@
 package co.edu.uniquindio.poo;
 
 public class Triangulo extends FiguraRegular implements IFiguraGeometrica,IFiguraRegular {
-
-
-    public Triangulo(double lado,double area) {
+    //cosntructor
+    public Triangulo(double lado) {
         super(lado);
     }
-
+    
+    //metodos
     public double calcularArea() {
-       
-    return (lado*lado)/2;
+        return (lado*lado)/2;
     }
  
     public double calcularPerimetro() {
-    return lado+lado+lado;
+        return lado+lado+lado;
     }
 
     public String calcularAngulo() {
-        return "un angulo de un triangulo regular es igual a 60 dando una suma de 180 entre todos";
+        return "60";
     }
 
     public double calcularLongitud() {
-         return lado * Math.sqrt(3) / 2;
+        return lado * Math.sqrt(3) / 2;
     }
     public double calcularAltura() {
         return (lado * Math.sqrt(3)) / 2.0;
