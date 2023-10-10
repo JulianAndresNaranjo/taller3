@@ -1,7 +1,7 @@
 package co.edu.uniquindio.poo;
 
 public interface IFiguraRegular {
-
+    //metodos
     String calcularAngulo();
     double calcularLongitud();
 
