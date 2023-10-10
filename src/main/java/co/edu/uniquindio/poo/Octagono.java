@@ -1,67 +1,28 @@
 package co.edu.uniquindio.poo;
 
-public class Octagono extends FiguraRegular implements IFiguraGeometrica {
-    private double longitudLado;
+public class Octagono  extends FiguraRegular implements IFiguraGeometrica,IFiguraRegular{
 
-    //CONSTRUCTOR
-    public Octagono(double lado, double longitudLado) {
+    public Octagono(double lado) {
         super(lado);
-        this.lado = lado;
-        this.longitudLado=longitudLado;
     }
 
-    //Métodos utilizados
     @Override
     public double calcularArea() {
-        double areaOctagono= 2 * Math.pow(longitudLado, 2) * (1 + Math.sqrt(2));
-        System.out.println("El área del Octágono es de: " + areaOctagono);
-        return areaOctagono;
+        return 2 * Math.pow(lado, 2) * Math.tan(Math.PI / 8);
     }
 
     @Override
     public double calcularPerimetro() {
-        double perimetroOctagono = 5*longitudLado;
-        System.out.println("El perímetro del Octágono es de: " +perimetroOctagono);
-        return perimetroOctagono;
+        return 8 * lado;
     }
 
     @Override
-    public double calcularSumaAngulosInteriores() {
-        double angulosInterioresOctagono= (lado - 2) * 180;
-        System.out.println("La suma de los ángulos interiores del Octágono es de: " + angulosInterioresOctagono);
-        return angulosInterioresOctagono;
+    public String calcularAngulo() {
+        return "cada angulo del octagono mide 45 grados asi dado un angulo completo de 360 grados";
     }
 
     @Override
-    public double calcularLongitudApotema() {
-        double longitudApotemaOctagono=(longitudLado / 2) * (1 + Math.sqrt(2));
-        System.out.println("La longitud del Apotema del Octágono es de: " + longitudApotemaOctagono);
-        return longitudApotemaOctagono;
+    public double calcularLongitud() {
+        return lado / (2.0 * Math.tan(Math.PI / 8));
     }
-
-    //DEMÁS MÉTODOS NO UTILIZADOS
-    @Override
-    public double calcularDiagonalCuadrados() {
-        return 0.0;
-    }
-
-    @Override
-    public double calcularDiametroCirculos() {
-        return 0.0;
-    }
-
-    @Override
-    public double calcularAlturaTriangulos() {
-        return 0.0;
-    }
-
-    //GETTERS Y SETTERS
-    public double getLongitudLado() {
-        return longitudLado;
-    }
-
-    public void setLongitudLado(double longitudLado) {
-        this.longitudLado = longitudLado;
-    }
-
 }
