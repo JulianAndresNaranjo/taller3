@@ -16,7 +16,7 @@ public class Triangulo extends FiguraRegular implements IFiguraGeometrica,IFigur
     }
 
     public String calcularAngulo() {
-        return "60";
+        return "180";
     }
 
     public double calcularLongitud() {
