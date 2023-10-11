@@ -17,7 +17,7 @@ public class Pentagono  extends FiguraRegular implements IFiguraGeometrica,IFigu
     }
 
     public String calcularAngulo() {
-        return "72";
+        return "540";
     }
 
     public double calcularLongitud() {
