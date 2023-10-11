@@ -6,24 +6,25 @@ public class Main {
     public static void main(String[] args){
      Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Seleccione una figura geometrica:");
-        System.out.println("1. Circulo\r\n" + 
-                "2. Triangulo\r\n" + 
-                "3. Cuadrado\r\n" + 
-                "4. Pentágono\r\n" + 
-                "5. Hexágono\r\n" + 
-                "6. Octágono");
-        System.out.println("");
-
-        int opcion = scanner.nextInt();
         double lado;
+        
+        int salida=1;
+        while(1==salida){
+            System.out.println("1. Circulo\r\n" + 
+                "2. Triangulo\r\n"+ 
+                "3. Cuadrado\r\n"+ 
+                "4. Pentágono\r\n"+ 
+                "5. Hexágono\r\n"+ 
+                "6. Octágono\r\n"+
+                "7. salir") ;
+            System.out.print("Seleccione una figura geometrica:");    
+            int opcion = scanner.nextInt();
+            System.out.println();
 
-        System.out.println("");
+            switch (opcion) {
+                case 1:
 
-        switch (opcion) {
-            case 1:
                 lado = 3;
-
                 Circulo Circulo = new Circulo(lado);
                 System.out.println("el area del circulo es de:"+Circulo.calcularArea());
                 System.out.println("el perimetrto del circulo es de:"+Circulo.calcularPerimetro());
@@ -31,7 +32,7 @@ public class Main {
                 System.out.println("");
                 break;
 
-             case 2:
+                case 2:
                 lado = 3;
                 Triangulo Triangulo = new Triangulo(lado);
                 System.out.println("el area del triangulo es de:"+Triangulo.calcularArea());
@@ -41,8 +42,8 @@ public class Main {
                 System.out.println("la altura del triangulo es:"+Triangulo.calcularAltura());
                 System.out.println("");
                 break;
-
-            case 3:
+                
+                case 3:
                 lado = 4;
                 Cuadrado Cuadrado = new Cuadrado(lado);
                 System.out.println("el area del cuadrado es de:"+Cuadrado.calcularArea());
@@ -53,7 +54,7 @@ public class Main {
                 System.out.println("");
                 break;
 
-            case 4:
+                case 4:
                 lado = 5;
                 Pentagono Pentagono= new Pentagono(lado);
                 System.out.println("el area del pentagono es de:"+Pentagono.calcularArea());
@@ -63,7 +64,7 @@ public class Main {
                 System.out.println("");
                 break;
 
-            case 5:
+                case 5:
                 lado = 6;
                 Hexagono Hexagono= new Hexagono(lado);
                 System.out.println("el area del hexagono es de:"+Hexagono.calcularArea());
@@ -72,8 +73,8 @@ public class Main {
                 System.out.println("la longitud apotema del hexagono es de:"+Hexagono.calcularLongitud());
                 System.out.println("");
                 break;
-            
-            case 6:
+
+                case 6:
                 lado = 8;
                 Octagono Octagono= new Octagono(lado);
                 System.out.println("el area del octagono es de:"+Octagono.calcularArea());
@@ -83,11 +84,15 @@ public class Main {
                 System.out.println("");
                 break;
 
+                case 7:
+                salida=2;
+                break;
 
-            default:
+                default:
                 System.out.println("Opción no válida. Seleccione una opción válida.");
                 System.out.println("");
         }
+    }
     scanner.close();
     }
 }
