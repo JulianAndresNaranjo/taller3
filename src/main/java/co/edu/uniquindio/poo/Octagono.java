@@ -16,7 +16,7 @@ public class Octagono  extends FiguraRegular implements IFiguraGeometrica,IFigur
     }
 
     public String calcularAngulo() {
-        return "45";
+        return "1080";
     }
 
     public double calcularLongitud() {
