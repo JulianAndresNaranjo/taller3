@@ -16,7 +16,7 @@ public class Cuadrado extends FiguraRegular implements IFiguraGeometrica,IFigura
     }
 
     public String calcularAngulo() {
-        return "90";
+        return "360";
     }
 
     public double calcularLongitud() {
