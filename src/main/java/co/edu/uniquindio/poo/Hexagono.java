@@ -16,7 +16,7 @@ public class Hexagono  extends FiguraRegular implements IFiguraGeometrica,IFigur
     }
 
     public String calcularAngulo() {
-        return "60";
+        return "720";
     }
 
     public double calcularLongitud() {
